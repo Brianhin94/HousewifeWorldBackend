@@ -11,12 +11,12 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.json({ message: "MERN app API Home"});
+    res.json({ message: "MERN app API Home" })
 });
 
 // Controllers
 app.use('/api', require('./controllers/auth'));
 
-app.listen(process.env.PORT || 3000, () => 
-  console.log(`🎧 You're listening to the smooth sounds of Port ${process.env.PORT || 3000}`)
+app.listen(process.env.PORT || 3001, () => 
+    console.log(`You're listening to the smooth sounds of Port ${process.env.PORT || 3000}`)
 );
