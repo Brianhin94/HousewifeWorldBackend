@@ -12,6 +12,10 @@ const options = {
     }
 }
 
+const favoriteSchema = new mongoose.Schema({
+    name: String
+})
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -25,7 +29,8 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    favorite: [favoriteSchema]
 }, options)
 
 module.exports = mongoose.model('User', userSchema);
