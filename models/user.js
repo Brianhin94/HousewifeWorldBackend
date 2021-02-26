@@ -13,6 +13,7 @@ const options = {
 }
 
 const favoriteSchema = new mongoose.Schema({
+    housewifeId: String,
     name: String
 })
 
